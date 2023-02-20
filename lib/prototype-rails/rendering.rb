@@ -9,5 +9,7 @@ ActionView::Helpers::RenderingHelper.module_eval do
     end
   end
   
-  alias_method_chain :render, :update
+  # alias_method_chain :render, :update
+  alias_method :render_without_update, :render
+  alias_method :render, :render_with_update
 end
